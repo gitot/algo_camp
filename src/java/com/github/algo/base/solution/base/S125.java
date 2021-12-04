@@ -1,42 +1,50 @@
 package com.github.algo.base.solution.base;
 
+/**
+ * 0. please understand the question firstly(improve English)
+ * 1. no need to know the int value that represents the char
+ * 2. no need to use nested loop
+ */
 public class S125 {
-
-
-    //todo
 
     public boolean isPalindrome(String s) {
         char[] chars = s.toCharArray();
-        int len = chars.length;
-        int left = 0, right = len - 1;
-        while (left < right && left >= 0 && left < len && right >= 0 && right < len){
-            while (!isAlphBet(chars[left])) {
+        int left = 0;
+        int right = chars.length - 1;
+
+        while (left < right) {
+            if (!isAlphBetOrNumber(chars[left])) {
                 left++;
+                continue;
             }
-            while (!isAlphBet(chars[right])) {
+            if (!isAlphBetOrNumber(chars[right])) {
                 right--;
+                continue;
             }
-            if (left < right) {
-                int div = chars[left] - chars[right];
-                if (Math.abs(div) != 0 && Math.abs(div) != 32) {
-                    return false;
-                }
-            } else {
-                return true;
+            if (toLower(chars[left]) != toLower(chars[right])) {
+                return false;
             }
             left++;
             right--;
         }
+
         return true;
     }
 
-    private boolean isAlphBet(char aChar) {
-        return (aChar >= 65 && aChar <= 80) || (aChar >= 97 && aChar <= 122);
+    private char toLower(char c) {
+        if (c >= 'a' && c <= 'z') return c;
+        if (c >= '0' && c <= '9') return c;
+        return (char) (c + 32);
     }
 
+    private boolean isAlphBetOrNumber(char c) {
+        if (c >= 'a' && c <= 'z') return true;
+        if (c >= 'A' && c <= 'Z') return true;
+        if (c >= '0' && c <= '9') return true;
+        return false;
+    }
 
     public static void main(String[] args) {
-        System.out.println(new S125().isPalindrome(" "));
-
+        System.out.println('z' - 0);
     }
 }

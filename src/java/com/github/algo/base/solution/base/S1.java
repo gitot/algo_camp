@@ -3,7 +3,7 @@ package com.github.algo.base.solution.base;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution {
+public class S1 {
 
     public int[] twoSum(int[] nums, int target) {
         int len = nums.length;
@@ -43,7 +43,7 @@ public class Solution {
     public static void main(String[] args) {
         int[] nums = {2,7,11,15};
         int target = 9;
-        new Solution().twoSum2(nums, target);
+        new S1().twoSum2(nums, target);
     }
 
 
