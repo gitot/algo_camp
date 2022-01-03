@@ -2,6 +2,7 @@ package com.github.algo.base.contest;
 
 public class S5970 {
     public int maximumInvitations(int[] favorite) {
+        //todo
         int length = favorite.length;
         int[] beloved = new int[length];
         for (int i = 0; i < length; i++) {
@@ -11,5 +12,6 @@ public class S5970 {
         for (int i = 0; i < beloved.length; i++) {
 
         }
+        return 0;
     }
 }
