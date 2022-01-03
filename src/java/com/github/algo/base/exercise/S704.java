@@ -1,4 +1,4 @@
-package com.github.algo.base.intro;
+package com.github.algo.base.exercise;
 
 /**
  * 二分解法，来回折腾了好几次才写对。

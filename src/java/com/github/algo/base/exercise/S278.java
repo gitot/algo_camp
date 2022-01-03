@@ -1,4 +1,4 @@
-package com.github.algo.base.intro;
+package com.github.algo.base.exercise;
 
 public class S278 extends VersionControl {
     public int firstBadVersion(int n) {

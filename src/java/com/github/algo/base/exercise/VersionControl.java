@@ -1,4 +1,4 @@
-package com.github.algo.base.intro;
+package com.github.algo.base.exercise;
 
 //mock super class
 public class VersionControl {
