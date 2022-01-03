@@ -3,6 +3,10 @@ package com.github.algo.base.exercise;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This question can be solved by dual-pointer solution.
+ * Give a try one day in the future.
+ */
 public class S977 {
     public int[] sortedSquares(int[] nums) {
         List<Integer> list = new ArrayList<>();
