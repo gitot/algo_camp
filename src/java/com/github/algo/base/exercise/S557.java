@@ -1,4 +1,4 @@
-package com.github.algo.base.everyday;
+package com.github.algo.base.exercise;
 
 public class S557 {
     public String reverseWords(String s) {
