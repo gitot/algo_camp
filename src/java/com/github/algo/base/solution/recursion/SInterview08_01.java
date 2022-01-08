@@ -1,5 +1,8 @@
 package com.github.algo.base.solution.recursion;
 
+/**
+ * Why should use long here?
+ */
 public class SInterview08_01 {
     public int waysToStep(int n) {
         if (n < 3) return n;
