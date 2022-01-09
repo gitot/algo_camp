@@ -3,7 +3,7 @@ package com.github.algo.base.exercise;
 public class S542_01 {
     public int[][] updateMatrix(int[][] mat) {
 
-        //todo
+        //todo a timeout solution
         int rows = mat.length;
         int cols = mat[0].length;
 
