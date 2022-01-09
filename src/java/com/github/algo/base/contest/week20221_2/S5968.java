@@ -1,4 +1,4 @@
-package com.github.algo.base.contest;
+package com.github.algo.base.contest.week20221_2;
 
 public class S5968 {
     public int numberOfBeams(String[] bank) {
