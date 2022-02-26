@@ -1,7 +1,5 @@
 package com.github.algo.base.solution.bt;
 
-import com.github.algo.base.solution.tree.TreeNode;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

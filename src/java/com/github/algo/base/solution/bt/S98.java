@@ -1,7 +1,5 @@
 package com.github.algo.base.solution.bt;
 
-import com.github.algo.base.solution.tree.TreeNode;
-
 public class S98 {
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, null, null);

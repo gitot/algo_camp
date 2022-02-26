@@ -1,4 +1,4 @@
-package com.github.algo.base.solution.tree;
+package com.github.algo.base.solution.bt;
 
 public class TreeNode {
     public int val;

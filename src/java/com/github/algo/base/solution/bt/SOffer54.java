@@ -1,7 +1,5 @@
 package com.github.algo.base.solution.bt;
 
-import com.github.algo.base.solution.tree.TreeNode;
-
 public class SOffer54 {
     int res, k;
 

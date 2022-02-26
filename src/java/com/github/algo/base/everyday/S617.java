@@ -1,6 +1,6 @@
 package com.github.algo.base.everyday;
 
-import com.github.algo.base.solution.tree.TreeNode;
+import com.github.algo.base.solution.bt.TreeNode;
 
 public class S617 {
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
