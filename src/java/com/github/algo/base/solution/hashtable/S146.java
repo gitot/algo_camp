@@ -4,9 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class S146 {
-    // TODO: 2/20/2022 Not accepted
     class LRUCache {
-
         int capacity;
         Map<Integer, Node> map;
         Node head;
@@ -19,10 +17,13 @@ public class S146 {
             head = new Node(-1,-1);
             tail = new Node(-1,-1);
             head.next = tail;
+            head.prev = null;
             tail.prev = head;
+            tail.next = null;
         }
 
         public int get(int key) {
+            if (size <= 0) return -1;
             if (!map.containsKey(key)) {
                 return -1;
             }
@@ -40,16 +41,14 @@ public class S146 {
         public void put(int key, int value) {
             if (map.containsKey(key)) {
                 Node node = map.get(key);
-                map.remove(key);
-                removeNode(node);
                 node.value = value;
-                map.put(key, node);
+                removeNode(node);
                 addAtHead(node);
                 return;
             }
             if (size >= capacity) {
+                map.remove(tail.prev.key); //this must be before the next statement !!
                 removeNode(tail.prev);
-                map.remove(tail.prev.key);
                 size--;
             }
             Node newNode = new Node(key,value);
@@ -58,11 +57,11 @@ public class S146 {
             size++;
         }
 
-        private void addAtHead(Node newNode) {
-            newNode.next = head.next;
-            head.next.prev = newNode;
-            newNode.prev = head;
-            head.next = newNode;
+        private void addAtHead(Node node) {
+            node.next = head.next;
+            head.next.prev = node;
+            head.next = node;
+            node.prev = head;
         }
 
         private void removeNode(Node node) {
@@ -82,5 +81,22 @@ public class S146 {
                 this.value = value;
             }
         }
+    }
+
+
+    public static void main(String[] args) {
+        S146 s146 = new S146();
+        S146.LRUCache cache = s146.new LRUCache(2);
+        cache.put(1, 1);
+        cache.put(2, 2);
+        int i = cache.get(1);
+        cache.put(3, 3);
+        int i1 = cache.get(2);
+        cache.put(4, 4);
+        int i2 = cache.get(1);
+        int i3 = cache.get(3);
+        int i4 = cache.get(4);
+
+
     }
 }
