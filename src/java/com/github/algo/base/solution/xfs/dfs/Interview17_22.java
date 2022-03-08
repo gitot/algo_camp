@@ -10,10 +10,7 @@ public class Interview17_22 {
         ArrayList<String> path = new ArrayList<>();
         Set<String> visited = new HashSet<>();
         dfs(visited, wordList, beginWord, path, endWord);
-        if (res.get(res.size() - 1).equals(endWord)) {
-            return res;
-        }
-        return new ArrayList<>();
+        return res;
     }
 
     private void dfs(Set<String> visited, List<String> wordList, String cur, List<String> path, String endWord) {
